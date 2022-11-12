@@ -4,3 +4,28 @@
 4. 측정소 정보 : https://www.airkorea.or.kr/web/stationInfo?pMENU_NO=93
 5. 구글 파이어베이스 : https://firebase.google.com
 6. 앱인벤터 : https://appinventor.mit.edu/
+
+
+
+int cSW=0; // current switch value (O)
+int pSW=0; // previous switch value (X)
+int ledVal = 0;
+
+void setup() {
+  pinMode(D2, INPUT); //Switch
+  pinMode(D4, OUTPUT); // LED
+}
+
+void loop() {
+  pSW = cSW;
+  cSW = digitalRead(D2);
+  delay(50);
+  
+  if( (cSW != pSW) && (!cSW == 1)) {
+    ledVal = !ledVal;
+  }
+    
+  digitalWrite(D4, ledVal);   
+}
+
+
