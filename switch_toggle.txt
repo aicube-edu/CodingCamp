@@ -1,0 +1,27 @@
+int sw1 = D2;
+int cSW1 = 0;
+int pSW1 = 0;
+int sw2 = D3;
+int cSW2 = 0;
+int pSW2 = 0;
+
+void setup() {
+  pinMode(sw1, INPUT);
+  pinMode(sw2, INPUT);
+}
+
+void loop() {
+  pSW1 = cSW1;
+  pSW2 = cSW2;
+  cSW1 = digitalRead(sw1);
+  cSW2 = digitalRead(sw2);
+  delay(50);
+  
+  if( (cSW1 != pSW1) && (!cSW1 == 1)) {
+    //code...
+  }
+
+  if( (cSW2 != pSW2) && (!cSW2 == 1)) {
+    //code...
+  }  
+}
