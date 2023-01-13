@@ -6,6 +6,12 @@
 6. 앱인벤터 : https://appinventor.mit.edu/
 
 
+firebase
+ - https://skku-iot-codingschool-default-rtdb.firebaseio.com
+ - wdWEaLkrCm45RU6R8DHgctkoMtBjeW2sa0bNUe2U
+
+
+
 
 int cSW=0; // current switch value (O)
 int pSW=0; // previous switch value (X)
